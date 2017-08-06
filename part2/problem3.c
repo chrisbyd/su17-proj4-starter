@@ -3,7 +3,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include "../part1/utils.h"
-#include "problem2.h"
+#include "problem3.h"
 
 /*
 	Function used to return the result of the third cache parameters question.
