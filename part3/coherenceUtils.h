@@ -143,11 +143,13 @@ void setState(cache_t* cache, uint32_t blockNumber, enum state newState);
 
 
 /*
-	Takes in a cache an address and a state that his address has in a different
+	Takes in a cache an address and a state that this address has in a different
 	cache. Updates the state in our current cache based upon the state
-	it gained in the other cache. This should only be called to update
-	other caches after a read or write has been successfully performed on
-	a cache.
+	it gained in the other cache as a result of performing a read or write in that
+	cache. This should only be called to update other caches after a read or write 
+	has been successfully performed on a cache. If a state is passed in from which
+	it is not possible that the other cache could have transtioned directly from it
+	being read from or written to then this function should do nothing.
 */
 void updateState(cache_t* cache, uint32_t address, enum state otherState);
 
